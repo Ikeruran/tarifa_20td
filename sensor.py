@@ -101,15 +101,15 @@ class PriceSensor(SensorEntity):
             self._state = self._valle
         else:
             hour = now.hour
-            if hour < 8:
+            if hour < 6:
                 self._state = self._valle
-            elif hour < 10:
+            elif hour < 8:
                 self._state = self._llana
-            elif hour < 14:
+            elif hour < 12:
                 self._state = self._punta
-            elif hour < 18:
+            elif hour < 16:
                 self._state = self._llana
-            elif hour < 22:
+            elif hour < 20:
                 self._state = self._punta
             else:
                 self._state = self._llana
